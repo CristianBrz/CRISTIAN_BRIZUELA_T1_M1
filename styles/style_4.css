@@ -2,7 +2,8 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Comic Sans MS", Calibri, sans-serif;
+	/* font-family: "Comic Sans MS", Calibri, sans-serif; */
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -11,39 +12,32 @@ body {
 }
 
 header {
+	display: flex;
+	align-items: top;
 	height: 300px;
-	margin-top: 80px;
 	background-image: url(../assets/design1_image1.jpg);
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
-	position: relative;
 }
 
 header>h1 {
-	font-size: 60px;
+	height: 100px;
+	flex-grow: 1;
+	font-size: 50px;
 	font-weight: normal;
 	text-transform: capitalize;
 	font-style: italic;
 	text-shadow: 1px 1px 2px #aaaaaa;
-	position: absolute;
-	top: -90px;
-	left: 12%;
-	margin-left: -45px;
 }
 
 .logo {
-	height: 150px;
-	width: 150px;
-	position: absolute;
-	z-index: 1;
-	top: -80px;
+	height: 100px;
+	width: 100px;
 }
 
 nav {
-	position: absolute;
-	top: -50px;
-	right: 30px;
+	padding: 40px;
+	height: 100px;
 }
 
 nav>a {
@@ -52,7 +46,7 @@ nav>a {
 	border-radius: 10px 0;
 	text-decoration: none;
 	padding: 0px 10px;
-	margin: 0px 3px;
+	margin: 5px 3px;
 	background-color: #801515;
 	color: #ffffff;
 	transform: skew(-20deg, 0deg);
@@ -69,8 +63,19 @@ a[href="#"] {
 	outline-offset: 3px;
 }
 
+/*********************************************/
+
+section {
+	height: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	/* border: #000000 solid; */
+}
+
 h2 {
-	display: block;
+	width: 100%;
+
 	background-color: #801515;
 	color: #ffffff;
 	text-align: center;
@@ -79,18 +84,9 @@ h2 {
 	border: 1px solid #000000;
 }
 
-.sangria {
-	width: 900px;
-	padding-top: 20px;
-	position: absolute;
-	top: 430px;
-	left: 400px;
-
-}
-
 .figure {
 	height: 300px;
-	width: 300px;
+	width: 30%;
 	margin: 20px;
 }
 
@@ -99,6 +95,11 @@ h2 {
 	width: 100%;
 	height: 100%;
 	box-shadow: 5px 5px 15px 5px #000000;
+}
+
+article, section>div{
+	padding: 20px 0 0 10px;
+	width: 65%;
 }
 
 article>p {
@@ -112,8 +113,4 @@ p {
 
 .mail {
 	text-decoration-color: #000000;
-}
-
-section {
-	height: 500px;
 }
